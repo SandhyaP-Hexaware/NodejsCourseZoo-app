@@ -15,7 +15,7 @@ const swaggerOptions={
         info:{
             title:'Zoo Mangement',
             version:'1.0.0',
-            servers:["http://localhost:3000"]
+          //  servers:["http://localhost:3000"]
         }
 
     },
@@ -27,7 +27,7 @@ console.log(swaggerDocs)
 app.use('/api-docs',swaggerUI.serve,swaggerUI.setup(swaggerDocs))
 
 
-const port=3000 || process.env.PORT
+const port=process.env.PORT || 3000
 
 app.listen(port,()=>{
     console.log(`Server is on port ${port}`)
